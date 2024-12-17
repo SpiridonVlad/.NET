@@ -13,6 +13,11 @@
       <label for="password">Password:</label>
       <input id="password" type="password" formControlName="password" required />
     </div>
+    <div>
+      <label for="confirmPassword">Confirm Password:</label>
+      <input id="confirmPassword" type="password" formControlName="confirmPassword" required />
+    </div>
     <button type="submit" [disabled]="registerForm.invalid">Register</button>
   </form>
+  <p *ngIf="passwordMismatch" class="error-message">Passwords do not match</p>
 </div>
